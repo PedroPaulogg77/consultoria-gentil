@@ -66,10 +66,10 @@ export default function Home() {
       <GovernanceSection />
       {/* 3. O QUE VOCÊ RECEBE */}
       <BenefitsSection />
-      {/* 4. PROVA SOCIAL */}
-      <SocialProofSection />
-      {/* 5. PARA QUEM FAZ SENTIDO */}
+      {/* 4. PARA QUEM FAZ SENTIDO */}
       <IdentificationSection />
+      {/* 5. PROVA SOCIAL */}
+      <SocialProofSection />
       {/* 6. QUEM CONDUZ */}
       <TalentsSection />
       {/* 7. COMO FUNCIONA */}

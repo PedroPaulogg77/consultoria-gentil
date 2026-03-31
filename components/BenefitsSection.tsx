@@ -3,39 +3,13 @@
 import { motion } from 'motion/react';
 import { Maximize, ShieldCheck, UserPlus, Combine } from 'lucide-react';
 import { BackgroundPaths } from '@/components/ui/background-paths';
-import DisplayCards from '@/components/ui/display-cards';
-import { Mobile3DCarousel } from '@/components/ui/mobile-3d-carousel';
 
 export function BenefitsSection() {
-  const cards = [
-    {
-      icon: <Maximize className="size-5 text-primary" />,
-      title: "Diagnóstico de marketing",
-      description: "Visão completa da sua estrutura atual e do que precisa mudar.",
-      className:
-        "[grid-area:stack] -translate-y-24 -translate-x-6 hover:-translate-y-32 hover:-translate-x-12 transition duration-700 before:absolute before:w-full before:h-full before:bg-black/60 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-10",
-    },
-    {
-      icon: <ShieldCheck className="size-5 text-primary" />,
-      title: "Gargalos identificados",
-      description: "Os principais bloqueios que travam seu crescimento, mapeados.",
-      className:
-        "[grid-area:stack] -translate-y-4 hover:-translate-y-12 hover:-translate-x-4 transition duration-700 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-20",
-    },
-    {
-      icon: <UserPlus className="size-5 text-primary" />,
-      title: "Direcionamento claro",
-      description: "Próximos passos definidos e priorizados ao final da conversa.",
-      className:
-        "[grid-area:stack] translate-x-6 translate-y-16 hover:translate-y-8 hover:translate-x-4 transition duration-700 before:absolute before:w-full before:h-full before:bg-black/20 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-30",
-    },
-    {
-      icon: <Combine className="size-5 text-primary" />,
-      title: "Oportunidades imediatas",
-      description: "Melhorias que podem ser aplicadas antes mesmo de qualquer plano.",
-      className:
-        "[grid-area:stack] translate-x-12 translate-y-36 hover:translate-y-24 hover:translate-x-12 transition duration-700 hover:z-50 z-40",
-    },
+  const items = [
+    { icon: <Maximize className="size-6 text-primary" />, title: 'Diagnóstico de marketing' },
+    { icon: <ShieldCheck className="size-6 text-primary" />, title: 'Gargalos identificados' },
+    { icon: <UserPlus className="size-6 text-primary" />, title: 'Direcionamento claro' },
+    { icon: <Combine className="size-6 text-primary" />, title: 'Oportunidades imediatas' },
   ];
 
   return (
@@ -43,42 +17,41 @@ export function BenefitsSection() {
       <div className="absolute inset-0 z-0 opacity-50">
         <BackgroundPaths />
       </div>
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="text-left"
-          >
-            <div className="badge-primary mb-6 w-fit">Diagnóstico Estratégico</div>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              O que você leva na <span className="text-primary">primeira conversa</span>
-            </h2>
-            <p className="font-body text-base text-text-secondary leading-relaxed mb-6">
-              Em uma única sessão estratégica com a liderança da Gentil, você sai com diagnóstico, gargalos identificados e direcionamento claro para crescer com previsibilidade.
-            </p>
-          </motion.div>
+      <div className="max-w-4xl mx-auto relative z-10">
 
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-center items-center lg:min-h-[500px]"
-          >
-            {/* Desktop View: Stacked display cards */}
-            <div className="hidden lg:flex w-full justify-center">
-              <DisplayCards cards={cards} />
-            </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
+        >
+          <div className="badge-primary mb-6 w-fit mx-auto">Diagnóstico Estratégico</div>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            O que você leva na <span className="text-primary">primeira conversa</span>
+          </h2>
+        </motion.div>
 
-            {/* Mobile View: 3D Carousel */}
-            <div className="flex lg:hidden w-full justify-center mt-0">
-              <Mobile3DCarousel cards={cards} />
-            </div>
-          </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {items.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="flex flex-col items-center text-center gap-4 p-6 md:p-8 rounded-2xl bg-bg-card border border-border-default hover:border-primary/40 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                {item.icon}
+              </div>
+              <p className="font-body text-sm md:text-base font-semibold text-text-primary leading-snug">
+                {item.title}
+              </p>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );

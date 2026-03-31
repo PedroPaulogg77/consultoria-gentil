@@ -1,120 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { SectionDivider } from './SectionDivider';
-
-const STEPS = [
-  {
-    id: 1,
-    content: (
-      <div className="flex flex-col items-center justify-center h-full text-center px-4">
-        <p className="font-body text-lg md:text-xl text-text-secondary mb-4 font-light max-w-2xl">
-          Na maioria das empresas, o problema não está na execução.
-        </p>
-        <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
-          Está na falta de direção, <br className="hidden md:block"/> estrutura e clareza.
-        </h2>
-        <span className="inline-flex items-center gap-4 text-primary font-display font-bold text-2xl md:text-3xl mt-2">
-          <span className="hidden md:block w-12 h-[3px] bg-primary rounded-full"></span>
-          Sem isso, nada escala.
-        </span>
-      </div>
-    )
-  },
-  {
-    id: 2,
-    content: (
-      <div className="flex flex-col items-center justify-center h-full text-center px-4">
-        <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-8 text-white">
-          Sem estrutura, o <br className="hidden md:block"/> marketing vira <span className="text-primary blur-[0.3px]">esforço disperso.</span>
-        </h2>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-3xl">
-          <div className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors">
-            <span className="block text-primary text-sm font-bold mb-2">01</span>
-            <span className="font-body text-lg md:text-xl text-text-secondary">Ações isoladas.</span>
-          </div>
-          <div className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors">
-            <span className="block text-primary text-sm font-bold mb-2">02</span>
-            <span className="font-body text-lg md:text-xl text-text-secondary">Sem previsibilidade.</span>
-          </div>
-          <div className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors">
-            <span className="block text-primary text-sm font-bold mb-2">03</span>
-            <span className="font-body text-lg md:text-xl text-text-secondary">Sem escala real.</span>
-          </div>
-        </div>
-      </div>
-    )
-  },
-  {
-    id: 3,
-    content: (
-      <div className="flex flex-col items-center justify-center h-full text-center px-4">
-        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">
-          Empresas maduras <br className="hidden md:block"/><span className="text-text-secondary font-light">não investem às cegas.</span>
-        </h2>
-        <div className="flex items-center gap-4 font-display font-bold text-2xl md:text-4xl text-primary mt-4">
-          Investem com clareza.
-        </div>
-      </div>
-    )
-  },
-  {
-    id: 4,
-    content: (
-      <div className="flex flex-col md:flex-row items-center justify-center h-full gap-8 md:gap-16 w-full text-left px-4">
-        <div className="md:w-1/2 text-center md:text-right">
-          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mt-4 text-white">
-            O que toda empresa <br className="hidden md:block"/> precisa ter <span className="text-primary">primeiro.</span>
-          </h2>
-        </div>
-        <div className="hidden md:block w-px h-32 bg-border-default/50"></div>
-        <div className="md:w-1/2 flex justify-center md:justify-start">
-          <ul className="space-y-4">
-            <li className="flex items-center gap-4">
-              <div className="w-2 h-2 rounded-full bg-primary" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white">Diagnóstico real</p>
-            </li>
-            <li className="flex items-center gap-4">
-              <div className="w-2 h-2 rounded-full bg-primary/80" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white/90">Gargalos mapeados</p>
-            </li>
-            <li className="flex items-center gap-4">
-              <div className="w-2 h-2 rounded-full bg-primary/60" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white/80">Direção definida</p>
-            </li>
-            <li className="flex items-center gap-4">
-              <div className="w-2 h-2 rounded-full bg-primary/40" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white/70">Próximos passos claros</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    )
-  },
-];
+import { motion } from 'motion/react';
 
 export function GovernanceSection() {
-  const [currentStep, setCurrentStep] = useState(0);
-
-  // Auto-play feature
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % STEPS.length);
-    }, 10000); // 10 seconds per slide
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <section className="py-24 px-6 bg-bg-secondary relative overflow-hidden flex flex-col items-center justify-center min-h-[500px] border-b border-border-default/30">
-      
-      <div className="max-w-5xl w-full mx-auto relative z-10">
-        
-        {/* Glow effect in background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+    <section className="py-24 px-6 bg-bg-secondary relative overflow-hidden border-b border-border-default/30">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="max-w-5xl w-full mx-auto relative z-10 space-y-24">
 
         {/* Título da seção */}
-        <div className="text-center mb-10">
+        <div className="text-center">
           <p className="font-body text-xs font-bold tracking-[0.2em] uppercase text-primary mb-3">
             Explicação
           </p>
@@ -123,43 +19,107 @@ export function GovernanceSection() {
           </h2>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative h-[350px] md:h-[400px] w-full flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentStep}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="absolute inset-0 w-full h-full flex flex-col items-center justify-center will-change-[transform,opacity]"
-            >
-              {STEPS[currentStep].content}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        {/* Banner 1 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <p className="font-body text-lg md:text-xl text-text-secondary mb-4 font-light">
+            Na maioria das empresas, o problema não está na execução.
+          </p>
+          <h3 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-6 text-white">
+            Está na falta de direção,<br className="hidden md:block" /> estrutura e clareza.
+          </h3>
+          <span className="inline-flex items-center gap-4 text-primary font-display font-bold text-2xl md:text-3xl">
+            <span className="hidden md:block w-12 h-[3px] bg-primary rounded-full" />
+            Sem isso, nada escala.
+          </span>
+        </motion.div>
 
-        {/* Controls and Progress */}
-        <div className="mt-8 flex flex-col items-center gap-6">
-          <div className="flex space-x-3">
-            {STEPS.map((step, index) => (
-              <button
-                key={step.id}
-                onClick={() => setCurrentStep(index)}
-                className="group relative flex items-center justify-center min-h-[48px] min-w-[48px] cursor-pointer"
-                aria-label={`Ir para o slide ${index + 1}`}
+        {/* Banner 2 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h3 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-10 text-white">
+            Sem estrutura, o marketing vira{' '}
+            <span className="text-primary">esforço disperso.</span>
+          </h3>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-3xl mx-auto">
+            {['Ações isoladas.', 'Sem previsibilidade.', 'Sem escala real.'].map((text, i) => (
+              <div
+                key={i}
+                className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors"
               >
-                <div
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    index === currentStep
-                      ? 'w-8 bg-primary shadow-[0_0_10px_rgba(232,123,28,0.5)]'
-                      : 'w-2 bg-text-muted hover:bg-text-secondary hover:w-4'
-                  }`}
-                />
-              </button>
+                <span className="block text-primary text-sm font-bold mb-2">0{i + 1}</span>
+                <span className="font-body text-lg md:text-xl text-text-secondary">{text}</span>
+              </div>
             ))}
           </div>
-        </div>
+        </motion.div>
+
+        {/* Banner 3 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white leading-tight">
+            Empresas maduras{' '}
+            <span className="text-text-secondary font-light">não investem às cegas.</span>
+          </h3>
+          <div className="font-display font-bold text-2xl md:text-4xl text-primary mt-4">
+            Investem com clareza.
+          </div>
+        </motion.div>
+
+        {/* Banner 4 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16"
+        >
+          <div className="md:w-1/2 text-center md:text-right">
+            <h3 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
+              O que toda empresa<br className="hidden md:block" /> precisa ter{' '}
+              <span className="text-primary">primeiro.</span>
+            </h3>
+          </div>
+          <div className="hidden md:block w-px h-32 bg-border-default/50" />
+          <div className="md:w-1/2 flex justify-center md:justify-start">
+            <ul className="space-y-4">
+              {[
+                'Diagnóstico real',
+                'Gargalos mapeados',
+                'Direção definida',
+                'Próximos passos claros',
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-4">
+                  <div
+                    className="w-2 h-2 rounded-full bg-primary shrink-0"
+                    style={{ opacity: 1 - i * 0.15 }}
+                  />
+                  <p
+                    className="font-body text-xl md:text-2xl font-medium text-white"
+                    style={{ opacity: 1 - i * 0.1 }}
+                  >
+                    {item}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
 
       </div>
     </section>
