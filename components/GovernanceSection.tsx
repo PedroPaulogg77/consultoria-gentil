@@ -92,20 +92,6 @@ const STEPS = [
       </div>
     )
   },
-  {
-    id: 5,
-    content: (
-      <div className="flex flex-col items-center justify-center h-full text-center relative w-full px-4">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[80px]" />
-        <h3 className="font-body text-lg md:text-xl text-primary font-bold tracking-widest uppercase mb-4 md:mb-6 relative z-10">
-          Não somos agência.
-        </h3>
-        <h2 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white relative z-10 leading-[1.1]">
-          Somos diagnóstico com <br className="hidden md:block"/> quem já fez.
-        </h2>
-      </div>
-    )
-  }
 ];
 
 export function GovernanceSection() {
@@ -115,7 +101,7 @@ export function GovernanceSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentStep((prev) => (prev + 1) % STEPS.length);
-    }, 6000); // 6 seconds per slide allows time to read
+    }, 10000); // 10 seconds per slide
     return () => clearInterval(timer);
   }, []);
 
@@ -126,6 +112,16 @@ export function GovernanceSection() {
         
         {/* Glow effect in background */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+
+        {/* Título da seção */}
+        <div className="text-center mb-10">
+          <p className="font-body text-xs font-bold tracking-[0.2em] uppercase text-primary mb-3">
+            Explicação
+          </p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-white/90">
+            Por que a maioria dos esforços de marketing não gera resultado?
+          </h2>
+        </div>
 
         {/* Carousel Container */}
         <div className="relative h-[350px] md:h-[400px] w-full flex items-center justify-center">
