@@ -1,30 +1,39 @@
 import dynamic from 'next/dynamic';
 import { HeroSection } from '@/components/HeroSection';
+import { TickerSection } from '@/components/TickerSection';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const GovernanceSection = dynamic(() =>
   import('@/components/GovernanceSection').then(m => ({ default: m.GovernanceSection }))
 );
-const IdentificationSection = dynamic(() =>
-  import('@/components/IdentificationSection').then(m => ({ default: m.IdentificationSection })),
-  { loading: () => <div className="min-h-[500px]" /> }
-);
-const ModelSection = dynamic(() =>
-  import('@/components/ModelSection').then(m => ({ default: m.ModelSection })),
-  { loading: () => <div className="min-h-[500px]" /> }
-);
 const BenefitsSection = dynamic(() =>
   import('@/components/BenefitsSection').then(m => ({ default: m.BenefitsSection })),
+  { loading: () => <div className="min-h-[500px]" /> }
+);
+const SocialProofSection = dynamic(() =>
+  import('@/components/SocialProofSection').then(m => ({ default: m.SocialProofSection })),
+  { loading: () => <div className="min-h-[700px]" /> }
+);
+const IdentificationSection = dynamic(() =>
+  import('@/components/IdentificationSection').then(m => ({ default: m.IdentificationSection })),
   { loading: () => <div className="min-h-[500px]" /> }
 );
 const TalentsSection = dynamic(() =>
   import('@/components/TalentsSection').then(m => ({ default: m.TalentsSection })),
   { loading: () => <div className="min-h-[500px]" /> }
 );
-const SocialProofSection = dynamic(() =>
-  import('@/components/SocialProofSection').then(m => ({ default: m.SocialProofSection })),
-  { loading: () => <div className="min-h-[700px]" /> }
+const ModelSection = dynamic(() =>
+  import('@/components/ModelSection').then(m => ({ default: m.ModelSection })),
+  { loading: () => <div className="min-h-[500px]" /> }
+);
+const NextStepSection = dynamic(() =>
+  import('@/components/NextStepSection').then(m => ({ default: m.NextStepSection })),
+  { loading: () => <div className="min-h-[300px]" /> }
+);
+const CTASection = dynamic(() =>
+  import('@/components/CTASection').then(m => ({ default: m.CTASection })),
+  { loading: () => <div className="min-h-[300px]" /> }
 );
 const ConversionSection = dynamic(() =>
   import('@/components/ConversionSection').then(m => ({ default: m.ConversionSection })),
@@ -49,13 +58,27 @@ export default function Home() {
           />
         </Link>
       </header>
+      {/* 1. HERO */}
       <HeroSection />
+      {/* Ticker de benefícios */}
+      <TickerSection />
+      {/* 2. EXPLICAÇÃO */}
       <GovernanceSection />
-      <IdentificationSection />
-      <ModelSection />
+      {/* 3. O QUE VOCÊ RECEBE */}
       <BenefitsSection />
-      <TalentsSection />
+      {/* 4. PROVA SOCIAL */}
       <SocialProofSection />
+      {/* 5. PARA QUEM FAZ SENTIDO */}
+      <IdentificationSection />
+      {/* 6. QUEM CONDUZ */}
+      <TalentsSection />
+      {/* 7. COMO FUNCIONA */}
+      <ModelSection />
+      {/* 8. PRÓXIMO PASSO */}
+      <NextStepSection />
+      {/* 9. CTA FINAL */}
+      <CTASection />
+      {/* 10. FORMULÁRIO */}
       <ConversionSection />
       <Footer />
     </main>
