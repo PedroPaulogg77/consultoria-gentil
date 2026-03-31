@@ -22,10 +22,6 @@ const TalentsSection = dynamic(() =>
   import('@/components/TalentsSection').then(m => ({ default: m.TalentsSection })),
   { loading: () => <div className="min-h-[500px]" /> }
 );
-const TechEcosystemSection = dynamic(() =>
-  import('@/components/TechEcosystemSection').then(m => ({ default: m.TechEcosystemSection })),
-  { loading: () => <div className="min-h-[600px]" /> }
-);
 const SocialProofSection = dynamic(() =>
   import('@/components/SocialProofSection').then(m => ({ default: m.SocialProofSection })),
   { loading: () => <div className="min-h-[700px]" /> }
@@ -59,7 +55,6 @@ export default function Home() {
       <ModelSection />
       <BenefitsSection />
       <TalentsSection />
-      <TechEcosystemSection />
       <SocialProofSection />
       <ConversionSection />
       <Footer />

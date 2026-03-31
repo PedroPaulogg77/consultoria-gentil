@@ -6,11 +6,11 @@ import Link from 'next/link';
 
 export function ModelSection() {
   const components = [
-    { icon: <Target className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Estratégia e gestão" },
-    { icon: <BarChart3 className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Performance e mídia" },
-    { icon: <PenTool className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Conteúdo e branding" },
-    { icon: <Workflow className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "CRM e automação" },
-    { icon: <Database className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Dados e inteligência" },
+    { icon: <Target className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Diagnóstico de marketing" },
+    { icon: <BarChart3 className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Gargalos identificados" },
+    { icon: <PenTool className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Direcionamento claro" },
+    { icon: <Workflow className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Melhorias imediatas" },
+    { icon: <Database className="w-3.5 h-3.5 md:w-4 md:h-4" />, title: "Visão de escala" },
   ];
 
   return (
@@ -27,18 +27,18 @@ export function ModelSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <div className="badge-primary mb-6 w-fit">Marketing as a Service</div>
+            <div className="badge-primary mb-6 w-fit">Como funciona</div>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Marketing sob medida com <span className="text-primary">equipes gerenciadas</span>
+              Simples, direto e <span className="text-primary">sem enrolação</span>
             </h2>
             <p className="font-body text-base text-text-secondary leading-relaxed mb-6">
-              A Gentil atua como uma extensão da sua empresa. Montamos equipes especializadas e gerenciadas, integrando marketing, vendas e tecnologia para estruturar processos, campanhas e dados.
+              Você agenda, a gente analisa o cenário da sua operação e apresenta um diagnóstico completo com direcionamento claro de próximos passos.
             </p>
             <p className="font-body text-base text-text-primary font-semibold mb-10">
-              Tudo com gestão, metodologia e SLA definidos.
+              Tudo em uma única conversa estratégica, sem custo inicial.
             </p>
             <Link href="#contato" className="btn-primary">
-              Ver como montar um squad para minha empresa
+              Agendar diagnóstico estratégico
             </Link>
           </motion.div>
 
@@ -55,7 +55,7 @@ export function ModelSection() {
                 
                 {/* Cliente */}
                 <div className="w-full bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-4 md:p-5 text-center relative z-10 shadow-xl">
-                  <span className="font-display font-medium text-base md:text-lg text-white/90">Cliente</span>
+                  <span className="font-display font-medium text-base md:text-lg text-white/90">Você</span>
                 </div>
 
                 {/* Arrow Down 1 */}
@@ -63,7 +63,7 @@ export function ModelSection() {
 
                 {/* Gentil Squad */}
                 <div className="w-full bg-gradient-to-b from-primary/20 to-primary/5 border border-primary/30 rounded-2xl p-5 md:p-6 text-center relative z-10 shadow-[0_0_40px_rgba(232,123,28,0.15)] backdrop-blur-md">
-                  <span className="font-display font-bold text-xl md:text-2xl text-primary block">Gentil Squad</span>
+                  <span className="font-display font-bold text-xl md:text-2xl text-primary block">Gentil</span>
                 </div>
 
                 {/* Arrow Down 2 */}
@@ -72,7 +72,7 @@ export function ModelSection() {
                 {/* Marketing + Vendas + Tecnologia */}
                 <div className="w-full bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-4 md:p-5 text-center relative z-10 shadow-xl">
                   <span className="font-body text-[9px] md:text-xs font-semibold tracking-[0.15em] uppercase text-white/80 leading-relaxed">
-                    Marketing <span className="text-primary">+</span> Vendas <span className="text-primary">+</span> Tecnologia
+                    Diagnóstico <span className="text-primary">+</span> Direção <span className="text-primary">+</span> Próximos passos
                   </span>
                 </div>
               </div>

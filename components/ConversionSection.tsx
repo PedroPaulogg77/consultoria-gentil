@@ -29,10 +29,10 @@ export function ConversionSection() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                Vamos estruturar a operação de marketing da <span className="text-primary">sua empresa?</span>
+                Agende seu <span className="text-primary">diagnóstico estratégico</span>
               </h2>
               <p className="font-body text-base text-text-secondary leading-relaxed mb-8">
-                Realizamos uma conversa estratégica para entender o momento da sua operação e avaliar como um squad Gentil pode apoiar seu time.
+                Preencha o formulário e entraremos em contato para agendar a conversa com a liderança da Gentil. Sem custo, sem compromisso.
               </p>
             </motion.div>
 
@@ -54,9 +54,10 @@ export function ConversionSection() {
                     empresa: (form.elements.namedItem('empresa') as HTMLInputElement).value,
                     email: (form.elements.namedItem('email') as HTMLInputElement).value,
                     whatsapp: (form.elements.namedItem('whatsapp') as HTMLInputElement).value,
+                    cargo: (form.elements.namedItem('cargo') as HTMLInputElement).value,
                     faturamento: (form.elements.namedItem('faturamento') as HTMLSelectElement).value,
-                    segmento: (form.elements.namedItem('segmento') as HTMLSelectElement).value,
-                    momento: (form.elements.namedItem('momento') as HTMLSelectElement).value,
+                    funcionarios: (form.elements.namedItem('funcionarios') as HTMLSelectElement).value,
+                    desafio: (form.elements.namedItem('desafio') as HTMLTextAreaElement).value,
                   };
                   try {
                     const res = await fetch('https://api.web3forms.com/submit', {
@@ -132,9 +133,22 @@ export function ConversionSection() {
                 </label>
               </div>
 
+              <div className="relative">
+                <input
+                  type="text"
+                  id="cargo"
+                  required
+                  placeholder=" "
+                  className="w-full h-14 px-5 pt-4 pb-2 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all peer"
+                />
+                <label htmlFor="cargo" className="absolute left-5 top-1/2 -translate-y-1/2 font-body text-sm text-text-muted pointer-events-none transition-all peer-focus:top-3.5 peer-focus:text-[0.6rem] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-wider peer-focus:text-primary peer-not-placeholder-shown:top-3.5 peer-not-placeholder-shown:text-[0.6rem] peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-wider peer-not-placeholder-shown:text-text-secondary">
+                  Cargo
+                </label>
+              </div>
+
               <div className="flex flex-col space-y-1.5">
                 <label htmlFor="faturamento" className="font-body text-sm font-bold tracking-wider uppercase text-text-secondary text-[0.6rem]">
-                  Qual o faturamento mensal da sua empresa?
+                  Faturamento mensal da empresa
                 </label>
                 <div className="relative">
                   <select
@@ -144,14 +158,13 @@ export function ConversionSection() {
                     className="w-full h-14 px-5 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer"
                   >
                     <option value="" disabled>Selecione uma opção</option>
-                    <option value="Até 100 mil">Até 100 mil</option>
-                    <option value="De 101 mil à 200 mil">De 101 mil a 200 mil</option>
-                    <option value="De 201 mil à 400 mil">De 201 mil a 400 mil</option>
-                    <option value="De 401 mil à 1 milhão">De 401 mil a 1 milhão</option>
-                    <option value="De 1 a 4 milhões">De 1 a 4 milhões</option>
-                    <option value="De 4 a 16 milhões">De 4 a 16 milhões</option>
-                    <option value="De 16 a 40 milhões">De 16 a 40 milhões</option>
-                    <option value="Mais de 40 milhões">Mais de 40 milhões</option>
+                    <option value="Até R$100 mil">Até R$100 mil</option>
+                    <option value="De R$101 mil a R$200 mil">De R$101 mil a R$200 mil</option>
+                    <option value="De R$201 mil a R$400 mil">De R$201 mil a R$400 mil</option>
+                    <option value="De R$401 mil a R$1 milhão">De R$401 mil a R$1 milhão</option>
+                    <option value="De R$1 a R$4 milhões">De R$1 a R$4 milhões</option>
+                    <option value="De R$4 a R$16 milhões">De R$4 a R$16 milhões</option>
+                    <option value="Acima de R$16 milhões">Acima de R$16 milhões</option>
                   </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,26 +175,22 @@ export function ConversionSection() {
               </div>
 
               <div className="flex flex-col space-y-1.5">
-                <label htmlFor="segmento" className="font-body text-sm font-bold tracking-wider uppercase text-text-secondary text-[0.6rem]">
-                  Qual é seu segmento?
+                <label htmlFor="funcionarios" className="font-body text-sm font-bold tracking-wider uppercase text-text-secondary text-[0.6rem]">
+                  Número de funcionários
                 </label>
                 <div className="relative">
                   <select
-                    id="segmento"
+                    id="funcionarios"
                     required
                     defaultValue=""
                     className="w-full h-14 px-5 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer"
                   >
                     <option value="" disabled>Selecione uma opção</option>
-                    <option value="Industria">Indústria</option>
-                    <option value="Facilities">Facilities</option>
-                    <option value="Tecnologia">Tecnologia</option>
-                    <option value="Consultoria">Consultoria</option>
-                    <option value="Agro">Agro</option>
-                    <option value="Educação">Educação</option>
-                    <option value="Varejo">Varejo</option>
-                    <option value="SAAS">SaaS</option>
-                    <option value="OUTRO">Outro</option>
+                    <option value="1 a 10">1 a 10</option>
+                    <option value="11 a 50">11 a 50</option>
+                    <option value="51 a 200">51 a 200</option>
+                    <option value="201 a 500">201 a 500</option>
+                    <option value="Mais de 500">Mais de 500</option>
                   </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,35 +200,24 @@ export function ConversionSection() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-1.5">
-                <label htmlFor="momento" className="font-body text-sm font-bold tracking-wider uppercase text-text-secondary text-[0.6rem]">
-                  Qual é o seu momento?
+              <div className="relative">
+                <textarea
+                  id="desafio"
+                  required
+                  placeholder=" "
+                  rows={3}
+                  className="w-full px-5 pt-6 pb-2 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none peer"
+                />
+                <label htmlFor="desafio" className="absolute left-5 top-4 font-body text-sm text-text-muted pointer-events-none transition-all peer-focus:top-1.5 peer-focus:text-[0.6rem] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-wider peer-focus:text-primary peer-not-placeholder-shown:top-1.5 peer-not-placeholder-shown:text-[0.6rem] peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-wider peer-not-placeholder-shown:text-text-secondary">
+                  Principal desafio hoje
                 </label>
-                <div className="relative">
-                  <select
-                    id="momento"
-                    required
-                    defaultValue=""
-                    className="w-full h-14 px-5 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer"
-                  >
-                    <option value="" disabled>Selecione uma opção</option>
-                    <option value="Já tenho um responsável interno de marketing">Já tenho um responsável interno de marketing</option>
-                    <option value="Já tenho uma equipe interna de marketing">Já tenho uma equipe interna de marketing</option>
-                    <option value="Ainda não tenho depto nem responsável de marketing internos">Ainda não tenho depto nem responsável de marketing internos</option>
-                  </select>
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-text-muted" />
-                    </svg>
-                  </div>
-                </div>
               </div>
 
               {erro && (
                 <p className="text-red-500 text-sm text-center">{erro}</p>
               )}
               <button type="submit" disabled={loading} className="btn-primary w-full mt-4 disabled:opacity-60 disabled:cursor-not-allowed">
-                {loading ? 'Enviando...' : 'Agendar conversa estratégica'}
+                {loading ? 'Enviando...' : 'Agendar diagnóstico estratégico'}
               </button>
             </form>
           </motion.div>

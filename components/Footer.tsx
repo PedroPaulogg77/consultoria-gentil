@@ -16,7 +16,7 @@ export function Footer() {
         </div>
       </div>
       <div className="text-gradient font-body text-sm mb-8">
-        Marketing as a Service
+        Diagnóstico Estratégico de Marketing
       </div>
       <p className="font-body text-xs text-text-tertiary">
         © {new Date().getFullYear()} Gentil Digital. Todos os direitos reservados.

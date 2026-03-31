@@ -9,18 +9,18 @@ export function IdentificationSection() {
   const blocks = [
     {
       icon: <Briefcase className="w-6 h-6 text-primary" />,
-      title: "Empresa com marketing interno sobrecarregado",
-      description: "Seu time cuida de redes sociais, campanhas, eventos, site, CRM e relatórios — e mesmo assim os resultados não evoluem na velocidade esperada."
+      title: "Faturamento acima de R$100 mil/mês",
+      description: "Empresas com operação financeira sólida e capacidade de investir em estruturação de marketing."
     },
     {
       icon: <TrendingUp className="w-6 h-6 text-primary" />,
-      title: "Empresa que precisa estruturar marketing e vendas",
-      description: "A empresa cresce, mas os processos ainda dependem de esforço manual e iniciativas isoladas."
+      title: "Já investe em marketing",
+      description: "Operações que já têm algum esforço de marketing em andamento e querem direcionar melhor o investimento."
     },
     {
       icon: <Users className="w-6 h-6 text-primary" />,
-      title: "Gestores que precisam escalar sem aumentar headcount",
-      description: "O desafio não é contratar mais pessoas — é organizar operação, tecnologia e estratégia."
+      title: "Quer escalar com previsibilidade",
+      description: "Negócios que buscam crescimento estruturado, não apenas resultados pontuais ou ações isoladas."
     }
   ];
 
@@ -36,7 +36,7 @@ export function IdentificationSection() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Para quem a <span className="text-primary">Gentil</span> funciona
+            Para quem <span className="text-primary">faz sentido</span>
           </h2>
         </motion.div>
 
@@ -69,7 +69,7 @@ export function IdentificationSection() {
           className="text-center"
         >
           <Link href="#modelo" className="inline-flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-primary-light transition-colors group">
-            Quero entender o modelo
+            Quero agendar meu diagnóstico
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>

@@ -10,14 +10,14 @@ const STEPS = [
     content: (
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
         <p className="font-body text-lg md:text-xl text-text-secondary mb-4 font-light max-w-2xl">
-          Hoje existem milhares de designers, social medias e ferramentas de IA criando posts bonitos.
+          Na maioria das empresas, o problema não está na execução.
         </p>
         <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
-          A estética deixou de <br className="hidden md:block"/> ser diferencial.
+          Está na falta de direção, <br className="hidden md:block"/> estrutura e clareza.
         </h2>
         <span className="inline-flex items-center gap-4 text-primary font-display font-bold text-2xl md:text-3xl mt-2">
           <span className="hidden md:block w-12 h-[3px] bg-primary rounded-full"></span>
-          Virou commodity.
+          Sem isso, nada escala.
         </span>
       </div>
     )
@@ -27,7 +27,7 @@ const STEPS = [
     content: (
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
         <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-8 text-white">
-          Sem governança, o <br className="hidden md:block"/> marketing vira <span className="text-primary blur-[0.3px]">tentativa.</span>
+          Sem estrutura, o <br className="hidden md:block"/> marketing vira <span className="text-primary blur-[0.3px]">esforço disperso.</span>
         </h2>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-3xl">
           <div className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors">
@@ -36,11 +36,11 @@ const STEPS = [
           </div>
           <div className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors">
             <span className="block text-primary text-sm font-bold mb-2">02</span>
-            <span className="font-body text-lg md:text-xl text-text-secondary">Prioridades confusas.</span>
+            <span className="font-body text-lg md:text-xl text-text-secondary">Sem previsibilidade.</span>
           </div>
           <div className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors">
             <span className="block text-primary text-sm font-bold mb-2">03</span>
-            <span className="font-body text-lg md:text-xl text-text-secondary">Resultados imprevisíveis.</span>
+            <span className="font-body text-lg md:text-xl text-text-secondary">Sem escala real.</span>
           </div>
         </div>
       </div>
@@ -51,10 +51,10 @@ const STEPS = [
     content: (
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
         <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">
-          Empresas maduras <br className="hidden md:block"/><span className="text-text-secondary font-light">não terceirizam posts.</span>
+          Empresas maduras <br className="hidden md:block"/><span className="text-text-secondary font-light">não investem às cegas.</span>
         </h2>
         <div className="flex items-center gap-4 font-display font-bold text-2xl md:text-4xl text-primary mt-4">
-          Terceirizam governança.
+          Investem com clareza.
         </div>
       </div>
     )
@@ -65,7 +65,7 @@ const STEPS = [
       <div className="flex flex-col md:flex-row items-center justify-center h-full gap-8 md:gap-16 w-full text-left px-4">
         <div className="md:w-1/2 text-center md:text-right">
           <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mt-4 text-white">
-            O que continua raro <br className="hidden md:block"/> é <span className="text-primary">estrutura.</span>
+            O que toda empresa <br className="hidden md:block"/> precisa ter <span className="text-primary">primeiro.</span>
           </h2>
         </div>
         <div className="hidden md:block w-px h-32 bg-border-default/50"></div>
@@ -73,19 +73,19 @@ const STEPS = [
           <ul className="space-y-4">
             <li className="flex items-center gap-4">
               <div className="w-2 h-2 rounded-full bg-primary" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white">Metas claras</p>
+              <p className="font-body text-xl md:text-2xl font-medium text-white">Diagnóstico real</p>
             </li>
             <li className="flex items-center gap-4">
               <div className="w-2 h-2 rounded-full bg-primary/80" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white/90">Processo definido</p>
+              <p className="font-body text-xl md:text-2xl font-medium text-white/90">Gargalos mapeados</p>
             </li>
             <li className="flex items-center gap-4">
               <div className="w-2 h-2 rounded-full bg-primary/60" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white/80">Integração com vendas</p>
+              <p className="font-body text-xl md:text-2xl font-medium text-white/80">Direção definida</p>
             </li>
             <li className="flex items-center gap-4">
               <div className="w-2 h-2 rounded-full bg-primary/40" />
-              <p className="font-body text-xl md:text-2xl font-medium text-white/70">Acompanhamento constante</p>
+              <p className="font-body text-xl md:text-2xl font-medium text-white/70">Próximos passos claros</p>
             </li>
           </ul>
         </div>
@@ -101,7 +101,7 @@ const STEPS = [
           Não somos agência.
         </h3>
         <h2 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white relative z-10 leading-[1.1]">
-          Somos uma operação de <br className="hidden md:block"/> marketing sob SLA.
+          Somos diagnóstico com <br className="hidden md:block"/> quem já fez.
         </h2>
       </div>
     )

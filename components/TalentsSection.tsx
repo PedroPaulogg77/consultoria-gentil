@@ -16,12 +16,11 @@ export function TalentsSection() {
             className="order-2 lg:order-1"
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
-              <Image 
-                src="/talents.png" 
-                alt="Plataformas de talentos como LinkedIn e Workana" 
-                fill 
+              <Image
+                src="/diretor.png"
+                alt="Diretor da Gentil Digital"
+                fill
                 className="object-contain drop-shadow-2xl"
-                referrerPolicy="no-referrer"
               />
             </div>
           </motion.div>
@@ -34,14 +33,14 @@ export function TalentsSection() {
             className="order-1 lg:order-2"
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Acesso aos <span className="text-primary">melhores profissionais</span> do mercado
+              Quem conduz o <span className="text-primary">diagnóstico</span>
             </h2>
             <p className="font-body text-base text-text-secondary leading-relaxed mb-6">
-              A Gentil opera com um modelo híbrido de talentos. Além do nosso squad fixo, utilizamos processos estruturados de recrutamento e parcerias com plataformas especializadas para selecionar profissionais técnicos e sêniores para cada projeto.
+              O diagnóstico é conduzido pelo diretor da Gentil Digital, com mais de 10 anos de atuação em projetos de estruturação de marketing e vendas para empresas como Stellantis, Raízen, Arborgen e outros clientes B2B de tecnologia, indústria e agronegócio.
             </p>
             <div className="p-4 border-l-2 border-primary bg-primary/5 rounded-r-lg">
               <p className="font-body text-sm text-text-primary font-medium">
-                Isso permite montar equipes flexíveis e altamente qualificadas, adaptadas ao momento e às necessidades de cada cliente.
+                Não é uma conversa de vendas. É uma sessão técnica com quem já estruturou marketing em empresas de diferentes portes e setores.
               </p>
             </div>
           </motion.div>
